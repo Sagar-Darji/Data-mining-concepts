@@ -150,6 +150,9 @@ df
 ```python
 df.dtypes
 ```
+
+> OUT:
+
     Temperature    object
     Outlook        object
     Humidity        int64
@@ -163,6 +166,8 @@ df.dtypes
 ```python
 df.info()
 ```
+
+> OUT:
 
     RangeIndex: 14 entries, 0 to 13
     Data columns (total 5 columns):
