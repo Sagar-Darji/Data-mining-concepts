@@ -1,3 +1,14 @@
+# Practical 2: Normalization techniques on sample dataset
+[![](https://img.shields.io/badge/Name-Sagar_Darji-blue.svg?style=flat)](https://www.linkedin.com/in/sagar-darji-7b7011165/)
+![](https://img.shields.io/badge/Enrollment.no-181310132010-blue.svg?style=flat)
+
+`Normalization` is used to scale the data of an attribute so that it falls in a smaller range, such as -1.0 to 1.0 or 0.0 to 1.0. It is generally useful for classification algorithms.
+
+Need of Normalization :
+
+- Normalization is generally required when we are dealing with attributes on a different scale, otherwise, it may lead to a dilution in effectiveness of an important equally important attribute(on lower scale) because of other attribute having values on larger scale.
+- In simple words, when multiple attributes are there but attributes have values on different scales, this may lead to poor data models while performing data mining operations. So they are normalized to bring all the attributes on the same scale.
+
 ```python
 import pandas as pd
 ```
@@ -11,20 +22,6 @@ df.head(10)
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -213,6 +210,29 @@ df.head(10)
 
 ## Min-Max Normalization
 
+In this technique of data normalization, linear transformation is performed on the original data. Minimum and maximum value from data is fetched and each value is replaced according to the following formula.
+
+![Min-Max normalization formula](https://media.geeksforgeeks.org/wp-content/uploads/20190327210233/min-max-normalization1.png)
+
+Where A is the attribute data,
+
+Min(A), Max(A) are the minimum and maximum absolute value of A respectively.
+
+v’ is the new value of each entry in data.
+
+v is the old value of each entry in data.
+
+new_max(A), new_min(A) is the max and min value of the range(i.e boundary value of range required) respectively.
+
+> Example
+
+```Let the input data is: -10, 201, 301, -401, 501, 601, 701
+To normalize the above data,
+ Step 1: Maximum absolute value in given data(m): 701
+ Step 2: Divide the given data by 1000 (i.e j=3)
+ Result: The normalized data is: -0.01, 0.201, 0.301, -0.401, 0.501, 0.601, 0.701
+```
+
 
 ```python
 def Max_min(v):
@@ -260,19 +280,6 @@ df
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -344,7 +351,14 @@ df
 
 
 
-##  Z-Score Normalization
+##  Z-Score Normalization:
+
+In this technique, values are normalized based on mean and standard deviation of the data A.
+
+The formula used is:
+![Z-score normalization formula](https://media.geeksforgeeks.org/wp-content/uploads/20190327204301/Z-score-normalization1.png)
+
+v’, v is the new and old of each entry in data respectively. σA, A is the standard deviation and mean of A respectively.
 
 
 ```python
@@ -379,19 +393,6 @@ df
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -463,7 +464,12 @@ df
 
 
 
-##  Decimal Normalization
+##  Decimal Normalization:
+
+It normalizes by moving the decimal point of values of the data. To normalize the data by this technique, we divide each value of the data by the maximum absolute value of data. The data value, vi, of data is normalized to vi‘ by using the formula below:
+![Decimal normalization formula](https://media.geeksforgeeks.org/wp-content/uploads/20190414090925/decimal-scaling1.png)
+
+where j is the smallest integer such that max(|vi‘|)<1.
 
 
 ```python
@@ -495,19 +501,6 @@ df
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
