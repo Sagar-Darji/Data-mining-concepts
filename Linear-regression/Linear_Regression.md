@@ -2,6 +2,15 @@
 [![](https://img.shields.io/badge/Name-Sagar_Darji-blue.svg?style=flat)](https://www.linkedin.com/in/sagar-darji-7b7011165/)
 ![](https://img.shields.io/badge/Enrollment.no-181310132010-blue.svg?style=flat)
 
+# Linear Regression:
+It is the basic and commonly used type for predictive analysis. It is a statistical approach to modelling the relationship between a dependent variable and a given set of independent variables.
+
+**These are of two types:**
+
+  1.Simple linear Regression
+   
+  2.Multiple Linear Regression
+
 # Simple Linear Regrssion:
 
 
@@ -346,7 +355,16 @@ print('RMSE',np.sqrt(metrics.mean_squared_error(ytest,ypred)),'(Root mean square
     
 
 
-# Multiple Linear Regression
+# Multiple Linear Regression:
+Multiple Linear Regression attempts to model the relationship between two or more features and a response by fitting a linear equation to observed data. The steps to perform multiple linear Regression are almost similar to that of simple linear Regression. The Difference Lies in the evaluation. We can use it to find out which factor has the highest impact on the predicted output and now different variable relate to each other.
+
+>Example
+
+```
+Y = b0 + b1 * x1 + b2 * x2 + b3 * x3 + …… bn * xn
+
+Y = Dependent variable and x1, x2, x3, …… xn = multiple independent variables
+```
 
 
 ```python
@@ -370,19 +388,6 @@ dataset.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -633,7 +638,7 @@ print(corr)
     sqft_lot15    -0.086419  0.254451       0.183192    1.000000  
     
 
-# HEAT MAP
+## HEAT MAP
 
 
 ```python
@@ -724,7 +729,7 @@ regressor.predict([[2000,2,6,2000]])
 
 
 
-# R-SQUARED VALUE
+## R-SQUARED VALUE
 
 
 ```python
@@ -739,7 +744,7 @@ r2_score(ytest, ypred)
 
 
 
-# ERROR
+## ERROR
 
 
 ```python
