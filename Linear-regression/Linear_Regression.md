@@ -373,6 +373,7 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 ```
 
+Take a look at the data set below, it contains some information about Houses.
 
 ```python
 #Import DataSet 
@@ -543,7 +544,11 @@ dataset.head()
 
 
 
+We can predict the price of a House based on the size of house in square ft, but with multiple regression we can throw in more variables, like the no of bathroom, Grade, etc, to make the prediction more accurate.
 
+## Indentfy the independent variables
+
+To Indentfy the independent variables, Pandas `dataframe.corr()` is used to find the pairwise correlation of all columns in the dataframe. Any na values are automatically excluded. For any non-numeric data type columns in the dataframe it is ignored.
 ```python
 corr=dataset.corr()
 print(corr)
@@ -638,8 +643,9 @@ print(corr)
     sqft_lot15    -0.086419  0.254451       0.183192    1.000000  
     
 
-## HEAT MAP
+### HEAT MAP
 
+For better visualization and understanding plot the Heat Map
 
 ```python
 import seaborn as sns
@@ -656,7 +662,11 @@ sns.heatmap(corr)
 
 ![png](output_5_1.png)
 
+From above Heat map, We can conclude that 'sqft_living','bathrooms','grade','sqft_above' these attributes have more corelation with price of House. 
 
+Then make a list of the independent values and call this variable X.
+
+Put the dependent values in a variable called y.
 
 ```python
 feature_cols = ['sqft_living','bathrooms','grade','sqft_above']
@@ -669,10 +679,9 @@ price=dataset['price']
 x = np.array(space)
 y = np.array(price)
 ```
-
+## Split the Data 
 
 ```python
-#Splitting the data into Train and Test
 from sklearn.model_selection import train_test_split 
 xtrain, xtest, ytrain, ytest = train_test_split(x,y,test_size=0.2, random_state=0)
 print(ytrain) 
@@ -681,8 +690,12 @@ print(ytest)
 
     [495000. 635000. 382500. ... 431000. 411000. 699900.]
     [ 297000. 1578000.  562100. ...  369950.  300000.  575950.]
-    
+ 
+## Fit the Model
 
+Now, Multiple regression is like linear regression. 
+
+Do the same as linear regression
 
 ```python
 #Fit Multiple linear regression on Training Set
@@ -694,7 +707,11 @@ print("Training complete.")
 
     Training complete.
     
+The coefficient is a factor that describes the relationship with an unknown variable.
 
+Example: if x is a variable, then 2x is x two times. x is the unknown variable, and the number 2 is the coefficient.
+
+The answer(s) we get tells us what would happen if we increase, or decrease, one of the independent values.
 
 ```python
 #Apply on Test Set 
@@ -714,7 +731,7 @@ print('Intercept =\n',regressor.intercept_)
     Intercept =
      -637447.4129246195
     
-
+### Make the prediction 
 
 ```python
 # You can also test with your own data
@@ -729,7 +746,7 @@ regressor.predict([[2000,2,6,2000]])
 
 
 
-## R-SQUARED VALUE
+### R-SQUARED VALUE
 
 
 ```python
@@ -744,7 +761,7 @@ r2_score(ytest, ypred)
 
 
 
-## ERROR
+### ERROR
 
 
 ```python
