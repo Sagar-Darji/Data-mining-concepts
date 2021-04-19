@@ -132,7 +132,7 @@ plt.show()
 ```
 
 
-![png](output_6_0.png)
+![png](https://github.com/Sagar-Darji/Data-mining-concepts/blob/main/Linear-regression/output_6_0.png)
 
 Yes, Hours of study and Score  has linear relationship so we can apply linear regression model to our Data. Here we have single variable so that we use simple linear regression.
 
@@ -264,7 +264,7 @@ plt.show()
 ```
 
 
-![png](output_15_0.png)
+![png](https://github.com/Sagar-Darji/Data-mining-concepts/blob/main/Linear-regression/output_15_0.png)
 
 
 ## Visualisation on Testing Data
@@ -281,7 +281,7 @@ plt.show()
 ```
 
 
-![png](output_17_0.png)
+![png](https://github.com/Sagar-Darji/Data-mining-concepts/blob/main/Linear-regression/output_17_0.png)
 
 
 ### Making predictions
@@ -660,7 +660,7 @@ sns.heatmap(corr)
 
 
 
-![png](output_5_1.png)
+![png](https://github.com/Sagar-Darji/Data-mining-concepts/blob/main/Linear-regression/output_5_1.png)
 
 From above Heat map, We can conclude that 'sqft_living','bathrooms','grade','sqft_above' these attributes have more corelation with price of House. 
 
