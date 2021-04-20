@@ -1,4 +1,4 @@
-# Practical 03: Implement ID3 and CART algorithm for decision tree classification.  
+# Practical 09: Implement ID3 and CART algorithm for decision tree classification.  
 ![](https://img.shields.io/badge/Name-Sagar_Darji-blue.svg?style=flat)
 ![](https://img.shields.io/badge/Enrollment.no-181310132010-blue.svg?style=flat)
 
