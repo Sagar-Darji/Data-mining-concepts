@@ -768,9 +768,3 @@ else:
 ```
 
     yes you can play
-    
-
-
-```python
-
-```
