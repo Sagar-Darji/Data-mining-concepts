@@ -1,4 +1,5 @@
-# Practical 05: Execute and analyze A-priori algorithm using Weka data mining tool with different support and confidence values. Study the rules generated. 
+# Practical 05: 
+## Execute and analyze A-priori algorithm using Weka data mining tool with different support and confidence values. Study the rules generated. 
 [![](https://img.shields.io/badge/Name-Sagar_Darji-blue.svg?style=flat)](https://www.linkedin.com/in/sagar-darji-7b7011165/)
 ![](https://img.shields.io/badge/Enrollment.no-181310132010-blue.svg?style=flat)
 
