@@ -1,4 +1,4 @@
-# Practical 13: Execute and analyze Linear Regression algorithm using Weka tool. 
+# Practical 03: Write a program to implement Binning method and Discretization on sample dataset  
 ![](https://img.shields.io/badge/Name-Sagar_Darji-blue.svg?style=flat)
 ![](https://img.shields.io/badge/Enrollment.no-181310132010-blue.svg?style=flat)
 
