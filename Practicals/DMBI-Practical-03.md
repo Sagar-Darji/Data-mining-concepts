@@ -1,13 +1,15 @@
-# BINNING AND DISCRETIZATION 
+# Practical 13: Execute and analyze Linear Regression algorithm using Weka tool. 
+![](https://img.shields.io/badge/Name-Sagar_Darji-blue.svg?style=flat)
+![](https://img.shields.io/badge/Enrollment.no-181310132010-blue.svg?style=flat)
+
+
+## BINNING AND DISCRETIZATION 
 
 Data binning (also called Discrete binning or bucketing) is a data pre-processing technique used to reduce the effects of minor observation errors. The original data values which fall into a given small interval, a bin, are replaced by a value representative of that interval, often the central value.
 Binning or discretization is the process of transforming numerical variables into categorical counterparts.
 There are two types of binning:
-•	Unsupervised Binning: Equal width binning, Equal frequency binning.
-•	Supervised Binning: Entropy-based binning.
-
-# CODE:
-
+- Unsupervised Binning: Equal width binning, Equal frequency binning.
+- Supervised Binning: Entropy-based binning.
 
 ```python
 import pandas as pd
@@ -20,19 +22,6 @@ df_sorted
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -136,7 +125,7 @@ a
 
 
 
-# EQUAL FREQUENCY
+## EQUAL FREQUENCY
 
 
 ```python
@@ -155,7 +144,7 @@ def equifreq(arr1, m):
     return arr
 ```
 
-# EQUAL WIDTH 
+## EQUAL WIDTH 
 
 
 ```python
@@ -192,7 +181,7 @@ print(equiwidth(a, b))
     [[19, 19, 20, 26, 28, 29, 31], [34, 35, 36, 42, 44, 45], [53]]
     
 
-# PLOTTING
+## PLOTTING
 
 
 ```python
