@@ -11,7 +11,7 @@
 
 ## Introduction to WEKA Data Mining tool and UCI data repository 
 WEKA is a data mining system developed by the University of Waikato in New Zealand that implements data mining algorithms.It is a collection of machine learning algorithms for data mining tasks. The algorithms are applied directly to a dataset. WEKA implements algorithms for data pre-processing, classification, regression, clustering, association rules; it also includes a visualization tool.
-![png](1-1.png)
+![png](https://github.com/Sagar-Darji/Data-mining-concepts/blob/5f0d9072e9046f8c79ebf38a68d250564d184e99/Practicals/1-1.png)
 
 ### ARFF file
 An ARFF (Attribute-Relation File Format) file is an ASCII text file that describes a list of instances sharing a set of attributes. ARFF files were developed by the Machine Learning Project at the Department of Computer Science of The University of Waikato for use with the Weka machine learning software. This document descibes the version of ARFF used with Weka versions 3.2 to 3.3; this is an extension of the ARFF format as described in the data mining book written by Ian H. Witten and Eibe Frank (the new additions are string attributes, date attributes, and sparse instances).
